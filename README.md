@@ -8,6 +8,9 @@
 - AutoHotkey v1. Скрипт использует синтаксис версии 1 и не совместим с AutoHotkey v2.
 - Для запуска Obsidian нужен файл `C:\Program Files\Obsidian\Obsidian.exe`.
 - Скрипт расположен в папке автозагрузки Windows и запускается при входе в систему. "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup"
+- ставим 2 языка (например,ENG+UKR), русский достигается словосочитанием клавиш
+- Удобно пользываться с Caramba switcher (для перекидывания текста в другую раскладку)
+
 
 ## Навигация
 
