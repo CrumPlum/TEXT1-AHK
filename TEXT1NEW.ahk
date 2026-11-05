@@ -39,6 +39,18 @@ Clipboard := savedClipboard
 savedClipboard := ""
 return
 
+CapsLock & x::
+savedClipboard := ClipboardAll
+Clipboard :=
+SendInput, ^c
+ClipWait, 0.5
+if (!ErrorLevel && Clipboard != "")
+    Run, % "https://translate.google.com/?sl=auto&tl=en&text=" . UriEncode(Clipboard) . "&op=translate"
+Clipboard := savedClipboard
+savedClipboard := ""
+return
+
+
 ; Open Obsidian
 CapsLock & o::Run, "C:\Program Files\Obsidian\Obsidian.exe"
 
