@@ -15,7 +15,7 @@ CapsLock & n::Send {blind}{Down 5}
 ; CapsLock shortcuts
 CapsLock & s::SendInput, #+s
 CapsLock & l::SendInput, sviraka@gmail.com
-CapsLock & vkDE::
+CapsLock & vk4B::
 FormatTime, currentDateTime,, yyyy.MM.dd HH:mm
 SendInput, %currentDateTime%
 return
@@ -66,6 +66,7 @@ CapsLock & vkBE::SendInput {>}
 CapsLock & vkC0::SendInput {~}
 CapsLock & vkBF::SendInput {/}
 CapsLock & vkDC::SendInput {|}
+CapsLock & vkDE::SendInput {"}
 
 
 ; RAlt + []
