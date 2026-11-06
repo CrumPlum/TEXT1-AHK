@@ -58,20 +58,17 @@ CapsLock & o::Run, "C:\Program Files\Obsidian\Obsidian.exe"
 CapsLock & p::SendInput, {RControl down}{Del}{RControl up}
 CapsLock & m::SendInput, {Volume_Mute}
 
-CapsLock & LAlt::
-if GetKeyState("Shift", "P")
-    SendInput, ^+{Left}
-else
-    SendInput, ^{Left}
-return
 
-CapsLock & vk20::
-if GetKeyState("Shift", "P")
-    SendInput, ^+{Right}
-else
-    SendInput, ^{Right}
-return
 
+
+; Навигация по словам (CapsLock + Alt -> влево, CapsLock + Пробел -> вправо)
+#If GetKeyState("CapsLock", "P")
+    *LAlt::SendInput {Blind}^{Left}
+    *Space::SendInput {Blind}^{Right}
+#If
+
+
+ 
 ; CapsLock + 1-0,\,<,>,/
 CapsLock & vk31::SendInput {!}
 CapsLock & vk32::SendInput {@}
