@@ -58,9 +58,19 @@ CapsLock & o::Run, "C:\Program Files\Obsidian\Obsidian.exe"
 CapsLock & p::SendInput, {RControl down}{Del}{RControl up}
 CapsLock & m::SendInput, {Volume_Mute}
 
-; Move by word
-CapsLock & LAlt::SendInput, ^{Left}
-CapsLock & vk20::SendInput, ^{Right}
+CapsLock & LAlt::
+if GetKeyState("Shift", "P")
+    SendInput, ^+{Left}
+else
+    SendInput, ^{Left}
+return
+
+CapsLock & vk20::
+if GetKeyState("Shift", "P")
+    SendInput, ^+{Right}
+else
+    SendInput, ^{Right}
+return
 
 ; CapsLock + 1-0,\,<,>,/
 CapsLock & vk31::SendInput {!}
